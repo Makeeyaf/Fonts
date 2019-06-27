@@ -1,5 +1,5 @@
 # Fonts
-Preview of all system fonts that are available on iOS device (Swift 5.0, Xcode 10.2)
+Preview all system fonts that are available on iOS device (Swift 5.0, Xcode 10.2)
 
 ## Feature
 - Preview all system fonts that are available on iOS device
