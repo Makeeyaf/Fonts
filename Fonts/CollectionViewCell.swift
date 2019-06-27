@@ -4,6 +4,6 @@ import UIKit
 
 class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var fontName: UILabel!
-    @IBOutlet weak var pengram: UILabel!
+    @IBOutlet weak var pangram: UILabel!
 
 }

@@ -70,7 +70,7 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="fontName" destination="Ifp-Hl-TP3" id="oZi-iE-0Zv"/>
-                                    <outlet property="pengram" destination="AWY-58-Ea9" id="gzL-cn-xdY"/>
+                                    <outlet property="pangram" destination="AWY-58-Ea9" id="vOO-Hu-jYc"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -172,7 +172,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Pengram" id="8vD-Sr-ASa">
+                            <tableViewSection headerTitle="Pangram" id="8vD-Sr-ASa">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="9PQ-d5-LIB">
                                         <rect key="frame" x="0.0" y="155.5" width="414" height="44"/>
@@ -187,7 +187,7 @@
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
-                                                        <action selector="pengramEdited:" destination="eoy-vg-0od" eventType="editingDidEnd" id="30Z-24-kNs"/>
+                                                        <action selector="pangramEdited:" destination="eoy-vg-0od" eventType="editingDidEnd" id="PKS-sB-03B"/>
                                                     </connections>
                                                 </textField>
                                             </subviews>
@@ -208,7 +208,7 @@
                     </tableView>
                     <connections>
                         <outlet property="fontSizeLabel" destination="vu5-mE-IY2" id="21v-lq-zmx"/>
-                        <outlet property="pengramLabel" destination="szE-ls-NhJ" id="ese-ck-29s"/>
+                        <outlet property="pangramLabel" destination="szE-ls-NhJ" id="mtx-FL-mcF"/>
                         <outlet property="slider" destination="q4c-QW-nTd" id="AIs-Kh-12r"/>
                     </connections>
                 </tableViewController>

@@ -7,7 +7,7 @@ class CollectionViewController: UICollectionViewController {
     var fontFamilies: [String] = UIFont.familyNames.sorted()
     var fontNames: [[String]] = []
     var fontSize: CGFloat = 17
-    var pengram = "The quick brown fox jumps over a lazy dog."
+    var pangram = "The quick brown fox jumps over a lazy dog."
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +33,13 @@ class CollectionViewController: UICollectionViewController {
             let vc = segue.destination as? TableViewController
             vc?.delegate = self
             vc?.fontSize = fontSize
-            vc?.pengram = pengram
+            vc?.pangram = pangram
         }
     }
     
-    func updateOption(fontSize: CGFloat, pengram: String) {
+    func updateOption(fontSize: CGFloat, pangram: String) {
         self.fontSize = fontSize
-        self.pengram = pengram
+        self.pangram = pangram
         collectionView.reloadData()
     }
     
@@ -73,7 +73,7 @@ class CollectionViewController: UICollectionViewController {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! CollectionViewCell
         let fontName = fontNames[indexPath.section][indexPath.row]
         cell.fontName.text = fontName
-        cell.pengram.attributedText = NSAttributedString(string: pengram, attributes: [NSAttributedString.Key.font : UIFont(name: fontName, size: fontSize)])
+        cell.pangram.attributedText = NSAttributedString(string: pangram, attributes: [NSAttributedString.Key.font : UIFont(name: fontName, size: fontSize)])
         return cell
     }
 

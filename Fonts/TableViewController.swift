@@ -4,31 +4,31 @@ import UIKit
 
 class TableViewController: UITableViewController {
     @IBOutlet weak var fontSizeLabel: UILabel!
-    @IBOutlet weak var pengramLabel: UITextField!
+    @IBOutlet weak var pangramLabel: UITextField!
     @IBOutlet weak var slider: UISlider!
     
     weak var delegate: CollectionViewController!
     
     var fontSize: CGFloat = 0
-    var pengram: String = ""
+    var pangram: String = ""
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         slider.value = Float(fontSize)
         fontSizeLabel.text = String(Int(fontSize))
-        pengramLabel.text = pengram
+        pangramLabel.text = pangram
     }
     
     @IBAction func sliderChanged(_ sender: UISlider) {
         fontSize = CGFloat(Int(sender.value.rounded()))
         fontSizeLabel.text = String(Int(fontSize))
-        delegate.updateOption(fontSize: fontSize, pengram: pengram)
+        delegate.updateOption(fontSize: fontSize, pangram: pangram)
     }
     
-    @IBAction func pengramEdited(_ sender: UITextField) {
-        pengram = sender.text ?? ""
-        delegate.updateOption(fontSize: fontSize, pengram: pengram)
+    @IBAction func pangramEdited(_ sender: UITextField) {
+        pangram = sender.text ?? ""
+        delegate.updateOption(fontSize: fontSize, pangram: pangram)
     }
     
     
