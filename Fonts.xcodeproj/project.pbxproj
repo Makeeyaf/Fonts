@@ -62,13 +62,13 @@
 			children = (
 				7E1942FB22C4123600E14543 /* Info.plist */,
 				7E1942EF22C4123600E14543 /* AppDelegate.swift */,
+				7E0013FB22C479520050EB33 /* CollectionReusableView.swift */,
 				7E19430322C4196B00E14543 /* CollectionViewCell.swift */,
 				7E19430122C4192A00E14543 /* CollectionViewController.swift */,
+				7E0013FD22C481BE0050EB33 /* TableViewController.swift */,
 				7E1942F622C4123600E14543 /* Assets.xcassets */,
 				7E1942F822C4123600E14543 /* LaunchScreen.storyboard */,
 				7E1942F322C4123600E14543 /* Main.storyboard */,
-				7E0013FB22C479520050EB33 /* CollectionReusableView.swift */,
-				7E0013FD22C481BE0050EB33 /* TableViewController.swift */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";

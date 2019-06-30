@@ -2,6 +2,10 @@
 
 import UIKit
 
+protocol CollectionViewDelegate: class {
+    func updateOption(fontSize: CGFloat, pangram: String)
+}
+
 class CollectionViewController: UICollectionViewController {
     
     var fontFamilies: [String] = UIFont.familyNames.sorted()
@@ -37,13 +41,6 @@ class CollectionViewController: UICollectionViewController {
         }
     }
     
-    func updateOption(fontSize: CGFloat, pangram: String) {
-        self.fontSize = fontSize
-        self.pangram = pangram
-        collectionView.reloadData()
-    }
-    
-
     // MARK: UICollectionViewDataSource
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
@@ -108,4 +105,12 @@ class CollectionViewController: UICollectionViewController {
     }
     */
 
+}
+
+extension CollectionViewController: CollectionViewDelegate {
+    func updateOption(fontSize: CGFloat, pangram: String) {
+        self.fontSize = fontSize
+        self.pangram = pangram
+        collectionView.reloadData()
+    }
 }

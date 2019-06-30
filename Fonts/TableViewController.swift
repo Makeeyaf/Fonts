@@ -7,7 +7,7 @@ class TableViewController: UITableViewController {
     @IBOutlet weak var pangramLabel: UITextField!
     @IBOutlet weak var slider: UISlider!
     
-    weak var delegate: CollectionViewController!
+    weak var delegate: CollectionViewDelegate?
     
     var fontSize: CGFloat = 0
     var pangram: String = ""
@@ -23,12 +23,12 @@ class TableViewController: UITableViewController {
     @IBAction func sliderChanged(_ sender: UISlider) {
         fontSize = CGFloat(Int(sender.value.rounded()))
         fontSizeLabel.text = String(Int(fontSize))
-        delegate.updateOption(fontSize: fontSize, pangram: pangram)
+        delegate?.updateOption(fontSize: fontSize, pangram: pangram)
     }
     
     @IBAction func pangramEdited(_ sender: UITextField) {
         pangram = sender.text ?? ""
-        delegate.updateOption(fontSize: fontSize, pangram: pangram)
+        delegate?.updateOption(fontSize: fontSize, pangram: pangram)
     }
     
     
